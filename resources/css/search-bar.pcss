@@ -1,0 +1,137 @@
+.overlay-toggle--search {
+  .icon--search {
+    width: 24px;
+    height: 24px;
+  }
+
+  .icon--close {
+    width: 30px;
+    height: 30px;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    .icon {
+      color: #8d8c8c;
+    }
+  }
+}
+
+.search-bar {
+  padding: 22px;
+}
+
+.search-bar--overlay {
+  width: 100%;
+  padding: var(--header-height--small) 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  /* Override Vuetensils no-scroll behaviour */
+  touch-action: initial !important;
+  user-select: initial !important;
+  -webkit-user-drag: initial !important;
+  -webkit-tap-highlight-color: initial !important;
+}
+
+.form__input-wrapper--search-bar {
+  height: 112px;
+
+  .form__submit {
+    width: 112px;
+  }
+}
+
+.form__input--search-bar {
+  font-size: 48px;
+  font-weight: 200;
+}
+
+.search-bar__action,
+.form__input--search-bar,
+.search-bar__options,
+.search-bar__option {
+  width: 100%;
+}
+
+.search-bar__options {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 22px;
+}
+
+.search-bar__option {
+  display: flex;
+  background: var(--background-darker);
+  color: var(--text-secondary);
+  padding: 20px;
+}
+
+.search-bar__option-label {
+  flex: 0 0 auto;
+  padding-top: 6px;
+}
+
+.button--search {
+  cursor: pointer;
+  font-size: 16px;
+  padding: 8px;
+  border: none;
+  align-self: flex-end;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: var(--primary-border-highlight);
+  appearance: none;
+  -webkit-appearance: none;
+  background: var(--background-darker);
+}
+
+.button--close-search {
+  position: absolute;
+  top: 8px;
+  right: 22px;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0;
+  border: none;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+}
+
+@media screen and (min-width: 37.5em) {
+  .form__input--search-bar {
+    font-size: 60px;
+  }
+
+  .search-bar__options {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .search-bar--overlay {
+    width: 70vw;
+    padding: var(--header-height) 22px;
+  }
+
+  .search-bar__options {
+    align-items: baseline;
+    flex-wrap: nowrap;
+  }
+
+  .search-bar__option--left {
+    flex: 40%;
+  }
+
+  .search-bar__option--right {
+    flex: 70%;
+  }
+}

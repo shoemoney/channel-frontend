@@ -1,0 +1,56 @@
+.icon {
+  --icon-transition-time: 0.2s;
+
+  overflow: hidden;
+  vertical-align: -0.25rem;
+  color: var(--highlight-primary);
+  transition: color var(--icon-transition-time) ease;
+}
+
+.icon--reverse {
+  color: var(--text-secondary);
+
+  &:hover {
+    color: var(--highlight-primary);
+  }
+}
+
+.icon--rotate {
+  transform: rotate(180deg);
+}
+
+.icon--hover-rotate:hover {
+  transform: rotate(180deg);
+  transition: transform var(--rotation-transition);
+}
+
+.icon--nav-bar-link {
+  --icon-transition-time: 0.08s;
+
+  transform: rotate(270deg);
+  height: 24px;
+  width: 24px;
+  margin-left: 8px;
+  color: #fff;
+}
+
+.loading-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.svg-square-animate {
+  stroke-dasharray: 320;
+  stroke-dashoffset: 320;
+  animation: dash 2s linear infinite;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 320;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}

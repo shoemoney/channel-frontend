@@ -1,0 +1,146 @@
+.ui-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-decoration: none;
+}
+
+.ui-card > a {
+  text-decoration: none;
+
+  &:focus {
+    outline-offset: 2px;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    .ui-card__thumbnail-image {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.ui-card:focus {
+  background-color: initial;
+}
+
+.ui-card__description {
+  margin: 0;
+  color: var(--text-primary);
+
+  .ui-card--dark-mode & {
+    color: var(--text-secondary);
+  }
+}
+
+.ui-card__duration {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #262626;
+  color: #fff;
+  z-index: 1;
+  font-weight: 400;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.ui-card__info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding: 24px 16px;
+}
+
+.ui-card__title {
+  padding: 16px 0 12px 0;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  color: var(--text-primary);
+
+  .ui-card--dark-mode & {
+    color: var(--text-secondary);
+  }
+}
+
+.ui-card__date {
+  font-size: 15px;
+  line-height: 22.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-primary);
+
+  .ui-card--dark-mode & {
+    color: var(--text-secondary);
+  }
+}
+
+.ui-card__thumbnail {
+  position: relative;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.ui-card__thumbnail::before {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-top: calc((9 / 16) * 100%);
+}
+
+.ui-card__thumbnail-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.ui-card__snippets {
+  margin-top: 16px;
+}
+
+.ui-card__snippet {
+  margin-bottom: 8px;
+  color: var(--text-primary);
+
+  .ui-card--dark-mode & {
+    color: var(--text-secondary);
+  }
+}
+
+.ui-card__highlight {
+  padding: 0 2px;
+  background: var(--background-dark);
+  color: var(--text-secondary);
+
+  .ui-card--dark-mode & {
+    background: var(--background-primary);
+    color: var(--text-primary);
+  }
+}
+
+@media (min-width: 52.5em) {
+  .ui-card__info {
+    padding: 40px;
+  }
+
+  .ui-card__title {
+    font-size: 22px;
+    line-height: 27px;
+  }
+
+  .ui-card__quote::before {
+    margin-left: -20.64px;
+  }
+}

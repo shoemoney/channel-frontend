@@ -1,0 +1,128 @@
+.search-header {
+  margin-left: 0;
+}
+
+.search-header__inner-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-header-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex: 1;
+}
+
+.search-header-summary {
+  margin-right: 22px;
+}
+
+.search-header__extras {
+  flex: 0 1 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.search-page__current-search {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  flex-wrap: wrap;
+
+  .search-facet__item {
+    margin-right: 16px;
+    color: var(--text-primary);
+  }
+}
+
+.search-page__sorting {
+  position: relative;
+}
+
+.search-page__sorting-control {
+  padding: 6px;
+  font-size: 16px;
+  color: var(--text-primary);
+  transition: all 0.2s cubic-bezier(0.25, 1.1, 0.68, 0.94);
+  cursor: pointer;
+}
+
+.search-page__sorting-control-label {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-page__sorting-content {
+  overflow: visible;
+  position: absolute;
+  background: var(--background-darker);
+  padding: 8px 8px 0 8px;
+  z-index: 2;
+  right: 0;
+  width: 180px;
+  text-align: right;
+
+  .link--text {
+    color: var(--text-secondary);
+  }
+}
+
+.vts-toggle--open .search-page__sorting-control-label {
+  color: var(--highlight-primary);
+}
+
+.search-page__sorting .icon {
+  transform: rotate(0);
+  transition: transform var(--rotation-transition);
+  margin-left: 8px;
+}
+
+.search-page__sorting.vts-toggle--open .icon {
+  transform: rotate(180deg);
+}
+
+.search-header__summary,
+.search-header-body,
+.search-header__heading {
+  margin-bottom: 24px;
+}
+
+@media (min-width: 60em) {
+  .search-header__summary,
+  .search-header-body,
+  .search-header__heading {
+    margin-bottom: 0;
+  }
+
+  .search-header__summary {
+    flex: 1;
+    margin: 0 24px;
+  }
+
+  .search-header {
+    margin-bottom: 40px;
+  }
+
+  .search-header__inner {
+    padding: 0;
+  }
+
+  .search-header__inner-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+
+@media (min-width: 73.75em) {
+  .search-header {
+    margin-left: 25%;
+  }
+
+  .search-header__inner {
+    padding-left: 0;
+  }
+}

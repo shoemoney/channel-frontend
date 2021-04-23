@@ -1,0 +1,20 @@
+.vts-drawer {
+  &.drawer__container {
+    top: 0;
+    height: 100vh;
+    transition: all var(--overlay-transition);
+    background: var(--overlay-dark);
+  }
+
+  .drawer__content {
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 4;
+    transition: transform var(--overlay-transition);
+    background-color: #fff;
+  }
+}

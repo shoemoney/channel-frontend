@@ -1,0 +1,78 @@
+.button {
+  background-color: var(--background-light);
+  position: relative;
+  display: -moz-inline-stack;
+  display: inline-block;
+  border: 0;
+  padding: 0;
+  border-radius: 0;
+  font-family: 'lft-etica', sans-serif;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  box-sizing: border-box;
+  vertical-align: top;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.button--disabled {
+  transition: all var(--default-transition);
+  opacity: 0.2;
+  color: var(--element-disabled);
+
+  .icon {
+    color: var(--element-disabled);
+  }
+}
+
+.button--icon {
+  background: none;
+}
+
+.button--action {
+  position: relative;
+  font-size: 16px;
+  background: var(--background-darker);
+  color: var(--text-secondary);
+  padding: 6px;
+  border-bottom: var(--primary-border-highlight);
+  transition: all 0.2s cubic-bezier(0.25, 1.1, 0.68, 0.94);
+  cursor: pointer;
+}
+
+.button--light {
+  background: var(--background-white);
+  color: var(--text-primary);
+  border-bottom: none;
+}
+
+.button--to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  transform: rotate(-90deg);
+  z-index: 1;
+}
+
+.button--safe-area-bottom {
+  /* Move button up to not interfere with certain iOS UI elements */
+  bottom: calc(env(safe-area-inset-bottom, 0) + 50px);
+}
+
+@media screen and (min-width: 60em) {
+  .button--small-devices {
+    display: none;
+  }
+}
+
+@media (hover: hover), (-ms-high-contrast: none) {
+  button:hover {
+    color: var(--highlight-primary);
+  }
+
+  .button--search-toggle:hover {
+    text-decoration: underline;
+    box-shadow: 1px 1px 1px 1px var(--highlight-primary);
+  }
+}
