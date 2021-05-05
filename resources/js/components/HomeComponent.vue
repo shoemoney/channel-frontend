@@ -142,7 +142,7 @@ export default {
     this.getFeatured();
     document.body.classList.add('front');
     // this.groupCells = this.windowWidth < 840 ? 1 : 2;
-    const pageTitle = 'the channel ';
+    const pageTitle = 'The Channel ';
     document.title = pageTitle;
 
     this.$gtm.trackEvent({

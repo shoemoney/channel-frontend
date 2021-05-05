@@ -17,7 +17,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'the channel '),
+    'name' => env('APP_NAME', 'The Channel'),
 
     /*
     |--------------------------------------------------------------------------
@@ -32,7 +32,7 @@ return [
 
     'description'  => env(
         'DESCRIPTION',
-        'the channel lets you watch, search, clip, and share videos from the the channel's’s programs and exhibitions, from 2005 to the present.'
+        'The Channel lets you watch, search, clip, and share videos'
     ),
 
     /*

@@ -468,13 +468,13 @@ export default {
       handler(to) {
         if (to.query) {
           this.getPageData(stringifyQuery(to.query));
-          let pageTitle = `Search | the channel `;
+          let pageTitle = `Search | The Channel `;
 
           if (to.query.term) {
             const term = to.query.term;
             this.setSearchTerm(term);
             this.$announcer.set(`Search results for ${term}. Page loaded with ${this.total} results.`);
-            pageTitle = `Search results for ${term} | the channel `;
+            pageTitle = `Search results for ${term} | The Channel `;
             this.$gtm.trackEvent({
               event: 'videoSearch',
               searchTerm: term,

@@ -29,14 +29,14 @@
               @click="navigate"
             >
               <h1 class="visually-hidden">
-                the channel
+                The Channel
               </h1>
               <BaseIcon
                 width="24"
                 height="24"
                 view-box="0 0 2000 196.21"
                 icon-name="main-logo"
-                title="the channel logo"
+                title="The Channel logo"
               >
                 <ChannelIcon />
               </BaseIcon>
@@ -49,7 +49,7 @@
               href="https://example.org"
               target="_blank"
             >
-              the channel's
+              Hammer Museum
             </a>
           </span>
         </div>

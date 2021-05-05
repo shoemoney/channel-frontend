@@ -134,7 +134,7 @@ export default {
       return this.$options.filters.dateFormat(new Date(this.date), 'MMMM DD, YYYY');
     },
     name() {
-      return 'the channel video';
+      return 'The Channel video';
     },
     text() {
       return this.title;

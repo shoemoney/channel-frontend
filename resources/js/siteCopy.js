@@ -1,7 +1,7 @@
 export default {
-  strapline: 'Programming and artist interviews from the the channel.',
+  strapline: 'An open source project by Hammer Museum',
   aboutHeading: 'Welcome',
-  aboutStrapline: 'the channel lets you watch, search, clip, and share videos.',
-  emailSignup: 'Stay in the know with emails from the channel',
+  aboutStrapline: 'The Channel lets you watch, search, clip, and share videos.',
+  emailSignup: 'Stay in the know with emails from The Channel',
   calendarLink: 'Upcoming programs',
 };
